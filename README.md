@@ -72,4 +72,56 @@ Click "OK"
 Click "Finish"
 Click "OK" and "Yes"
 
+####### Code of testbench 
+```vhdl
+p_stimulus : process
+    begin
+        -- Report a note at the begining of stimulus process
+        report "Stimulus process started" severity note;
+
+
+        -- First test values
+        s_d <= "00"; s_c <= "00"; s_b <= "00"; s_a <= "00";
+        s_sel <= "00"; wait for 50 ns;
+        
+        s_a <= "01"; wait for 50 ns;
+        s_b <= "01"; wait for 50 ns;
+        
+        s_sel <= "01"; wait for 50 ns;
+        s_c <= "00"; wait for 50 ns;
+        s_b <= "11"; wait for 50 ns;
+        
+        s_d <= "10"; s_c <= "11"; s_b <= "01"; s_a <= "00"; 
+        s_sel <= "10"; wait for 50 ns;
+        
+        s_d <= "00"; s_c <= "00"; s_b <= "00"; s_a <= "00"; 
+        s_sel <= "10"; wait for 50 ns;
+        
+        s_d <= "10"; s_c <= "11"; s_b <= "01"; s_a <= "00";
+        s_sel <= "11"; wait for 50 ns;
+
+        -- Report a note at the end of stimulus process
+        report "Stimulus process finished" severity note;
+        --wait;
+    end process p_stimulus;
+ ```
+ 
+ ####### Code of design
+ ```vhdl
+ begin
+    -- Connecting testbench signals with comparator_2bit entity (Unit Under Test)
+    uut_mux_2bit_4to1 : entity work.mux_2bit_4to1
+        port map(
+            a_i           => s_a,
+            b_i           => s_b,
+            c_i           => s_c,
+            d_i           => s_d,
+            sel_i         => s_sel,
+            f_o => s_f
+        );
+
+  ```
+
+
+
 ![Nexys A7](graf.png)
