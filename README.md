@@ -71,3 +71,5 @@ Click "Create File", make sure your file type is under "VHDL" and type file name
 Click "OK"
 Click "Finish"
 Click "OK" and "Yes"
+
+!Graph (graf.png)
