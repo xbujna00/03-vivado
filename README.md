@@ -72,4 +72,4 @@ Click "OK"
 Click "Finish"
 Click "OK" and "Yes"
 
-!Graph (graf.png)
+![Nexys A7](graf.png)
