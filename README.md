@@ -4,6 +4,8 @@
 
 ### 1. Table with connection of 16 slide switches and 16 LEDs on nexys a7 board 
 
+![Nexys A7](16.png)
+
 
 
 | **Component** | **Pin** |
