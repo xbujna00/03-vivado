@@ -49,3 +49,25 @@
 | LED14 | V12 |
 | LED15 | V11 |
 
+
+
+#### Project creation
+Open
+File -> New Project or Under the Quick Start click "Create Project"
+Click "Next >"
+Type name of the project and select project location where it should be placed, then click "Next>"
+Click "Next >"
+##### Adding source file
+Click "Create File", make sure that u are setting file type under "VHDL" and type file name, it should same as project name
+Click OK then Next 3times
+Click on "Boards" and select your board -  lab3 board : "Nexys A7-50T"
+Click "Next >"
+Click "Finish"
+Click "OK" and "Yes"
+###### Adding testbench file
+File-Add sources 
+Click "Next >"
+Click "Create File", make sure your file type is under "VHDL" and type file name which is important to start with "tb_" and then our project name
+Click "OK"
+Click "Finish"
+Click "OK" and "Yes"
